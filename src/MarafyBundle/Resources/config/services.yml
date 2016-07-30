@@ -1,0 +1,4 @@
+services:
+#    marafy.example:
+#        class: MarafyBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

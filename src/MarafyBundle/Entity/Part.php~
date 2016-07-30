@@ -1,0 +1,190 @@
+<?php
+
+namespace MarafyBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Part
+ *
+ * @ORM\Table(name="part")
+ * @ORM\Entity(repositoryClass="MarafyBundle\Repository\PartRepository")
+ */
+class Part
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=255)
+     */
+    private $title;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="reference", type="string", length=255)
+     */
+    private $reference;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=255)
+     */
+    private $description;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="qte", type="float")
+     */
+    private $qte;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="photo", type="integer")
+     */
+    private $photo;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     *
+     * @return Part
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set reference
+     *
+     * @param string $reference
+     *
+     * @return Part
+     */
+    public function setReference($reference)
+    {
+        $this->reference = $reference;
+
+        return $this;
+    }
+
+    /**
+     * Get reference
+     *
+     * @return string
+     */
+    public function getReference()
+    {
+        return $this->reference;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Part
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set qte
+     *
+     * @param float $qte
+     *
+     * @return Part
+     */
+    public function setQte($qte)
+    {
+        $this->qte = $qte;
+
+        return $this;
+    }
+
+    /**
+     * Get qte
+     *
+     * @return float
+     */
+    public function getQte()
+    {
+        return $this->qte;
+    }
+
+    /**
+     * Set photo
+     *
+     * @param integer $photo
+     *
+     * @return Part
+     */
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
+
+        return $this;
+    }
+
+    /**
+     * Get photo
+     *
+     * @return int
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+}
+

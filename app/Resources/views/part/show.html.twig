@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Part</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ part.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ part.title }}</td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>{{ part.reference }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ part.description }}</td>
+            </tr>
+            <tr>
+                <th>Qte</th>
+                <td>{{ part.qte }}</td>
+            </tr>
+            <tr>
+                <th>Photo</th>
+                <td>{{ part.photo }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('part_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('part_edit', { 'id': part.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
